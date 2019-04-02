@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ejercicio 3</title>
+	</head>
+
+	<body>
+		<h2>Una muestra de Cobol</h2>
+		<pre>
+			<code>
+		  PROCEDURE DIVISION USING BORROWER LOAN.
+       TASK1-SMF.
+           INITIALIZE BRCC-CONN-AREA
+           MOVE "miniloan" TO BRCC-CONN-RULESET-NAME OF BRCC-R4C-DATA
+           MOVE "20100305" TO BRCC-CONN-CREATE-DATE OF BRCC-R4C-DATA
+           MOVE "100702" TO BRCC-CONN-CREATE-TIME OF BRCC-R4C-DATA
+           MOVE BRCC-CONN-RS OF BRCC-R4C-CONSTANTS TO 
+           BRCC-CONN-CREATE-METHOD OF BRCC-R4C-DATA
+           COPY BRCCINIT.
+           PERFORM TASK2-MAINFLOW
+           COPY BRCCTERM.
+           GOBACK.
+      * RuleFlow mainflow
+       TASK2-MAINFLOW.
+           PERFORM TASK3-MAINFLOW-VALIDATION
+           PERFORM TASK4-MAINFLOW-ELIGIBILITY.
+           </code>
+		</pre>
+		<h2>Una muestra de Fortran</h2>
+		<pre>
+			<code>
+				#include <stdio.h>
+	int main(int argc, char *argv[])
+	{
+	    int x;
+	    printf("%d\n",argc); 
+	    for (x=0; x<argc; x++)
+	        printf("%s\n",argv[x]);
+	    return 0;
+	}	
+			</code>
+		</pre>
+
+
+	</body>
+</html>
